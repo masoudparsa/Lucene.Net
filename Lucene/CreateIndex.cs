@@ -17,6 +17,7 @@ namespace Lucene
 {
     public static class CreateIndex
     {
+
         static readonly Lucene.Net.Util.Version _version = Lucene.Net.Util.Version.LUCENE_30;
         private static IndexSearcher _searcher;
         private static string  _path = AppDomain.CurrentDomain.BaseDirectory + "\\LuceneIndex";
