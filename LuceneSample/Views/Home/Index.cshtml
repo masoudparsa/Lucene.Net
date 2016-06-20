@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+    var scoredTermsUrl = Url.Action(actionName: "ScoredTerms", controllerName: "Home");
+    var bulletImage = Url.Content("~/Content/Images/bullet_shape.png");
+}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> 
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/scripts/jquery-1.9.1.js"></script>
+<script src="~/scripts/jquery-ui.min.js"></script>
+
+<script src="~/scripts/bootstrap.min.js"></script>
+<script src="~/scripts/home_onOperations.js"></script>
+
+<div class="container"><h2>Lucene</h2>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="ui-widget">
+                <label for="txtSearch">Search Person:</label>
+                <input type="text" class="form-control" id="txtSearch">
+                
+                
+            </div>
+            @*<input type="button" class="btn btn-primary" value="Search"/>*@
+                @*@Html.TextBox("txtSearch", "", htmlAttributes: new { dir = "ltr" })*@
+        </div>
+        <div class="col-lg-6">
+
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        //EnableSearchAutocomplete('@scoredTermsUrl', '@bulletImage');
+    </script>
+}
+
